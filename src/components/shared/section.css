@@ -1,0 +1,87 @@
+.container{
+    background-image: url(../../images/model-s.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.textitem{
+    text-align: center;
+    display: flex;
+    font-size: larger;
+    flex-direction: column;
+    padding-top: 150px;
+    color: rgb(62, 62, 62);
+}
+.buttons{
+    margin-bottom: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.leftButton{
+    padding: 0;
+    width: 300px;
+    opacity: 0.5;
+    height: 45px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.rightButton{
+    padding: 0;
+    width: 300px;
+    opacity: 0.5;
+    height: 45px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.all-buttons{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.all-buttons img{
+    animation: upDown infinite 1.5s;
+}
+
+@media (max-width: 980px) {
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header .tesla{
+        height: 20px;
+    }
+    .second-menu img {
+        height: 15px;
+    }
+    .second-menu {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    
+}
+
