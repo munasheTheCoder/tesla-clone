@@ -16,7 +16,7 @@
     font-size: larger;
     flex-direction: column;
     padding-top: 100px;
-    color: rgb(62, 62, 62);
+    color: white;
 }
 .buttons{
     margin-bottom: 10px;
@@ -63,6 +63,15 @@
 
 .all-buttons img{
     animation: upDown infinite 1.5s;
+}
+
+
+
+.top{
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    width: 30px;
 }
 
 @media (max-width: 980px) {

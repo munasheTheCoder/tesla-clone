@@ -1,10 +1,19 @@
-import React , {useState}from 'react'
+import React , {useState, useRef}from 'react'
 import logo from '../images/logo.svg'
 import cancelMenu from '../images/cancel.svg'
 import menu from '../images/three-horizontal-lines-icon.svg'
 import styled from 'styled-components'
-const Header = () => {
+const Header = ({ modelSRef, model3Ref, modelXRef, modelYRef, modelCRef, modelNRef, modelARef }) => {
 
+  const scrollToSection = (elementRef, event) => {
+    event.preventDefault();
+    if (elementRef.current) {
+        window.scrollTo({
+            top: elementRef.current.offsetTop,
+            behavior: 'smooth',
+        });
+    }
+};
   const [open, setOpen] = useState(0)
 
  
@@ -13,12 +22,13 @@ const Header = () => {
       <img className='tesla' src={logo}/>
       <nav>
         <ul>
-          <li><a href="#">Model S</a>
-          </li>
-          <li><a href={1}>Model 3</a></li>
-          <li><a href="#">Model X</a></li>
-          <li><a href="#">Model Y</a></li>
-          <li><a href="#">Cyber Truck</a></li>
+          <li><a onClick={(event) => scrollToSection(modelSRef, event)} href="#">Model S</a></li>
+          <li><a onClick={(event) => scrollToSection(model3Ref, event)} href='#'>Model 3</a></li>
+          <li><a onClick={(event) => scrollToSection(modelXRef, event)} href="#">Model X</a></li>
+          <li><a onClick={(event) => scrollToSection(modelYRef, event)} href="#">Model Y</a></li>
+          <li><a onClick={(event) => scrollToSection(modelCRef, event)} href="#">Cyber Truck</a></li>
+          <li><a onClick={(event) => scrollToSection(modelNRef, event)}  href="#">Solar Roof</a></li>
+          <li><a onClick={(event) => scrollToSection(modelARef, event)}  href="#">Accessories</a></li>
         </ul>
       </nav>
 
@@ -34,13 +44,13 @@ const Header = () => {
 
       <NavMenu show={open}>
             <img className='cancel' onClick={() => setOpen(false)} src={cancelMenu} height={25}/>
-            <li><a href="#">Model S</a></li>
-          <li><a href="#">Model 3</a></li>
-          <li><a href="#">Model X</a></li>
-          <li><a href="#">Model Y</a></li>
-          <li><a href="#">Cyber Truck</a></li>
-          <li><a href="#">Solar Roof</a></li>
-          <li><a href="#">Accessories</a></li>
+            <li><a onClick={(event) => scrollToSection(modelSRef, event)} href="#">Model S</a></li>
+          <li><a onClick={(event) => scrollToSection(model3Ref, event)} href='#'>Model 3</a></li>
+          <li><a onClick={(event) => scrollToSection(modelXRef, event)} href="#">Model X</a></li>
+          <li><a onClick={(event) => scrollToSection(modelYRef, event)} href="#">Model Y</a></li>
+          <li><a onClick={(event) => scrollToSection(modelCRef, event)} href="#">Cyber Truck</a></li>
+          <li><a onClick={(event) => scrollToSection(modelNRef, event)}  href="#">Solar Roof</a></li>
+          <li><a onClick={(event) => scrollToSection(modelARef, event)}  href="#">Accessories</a></li>
         </NavMenu>
 
     </header>

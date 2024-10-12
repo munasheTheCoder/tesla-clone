@@ -1,24 +1,35 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import downArrow from '../../images/down-arrow.svg'
+import top from '../../images/chevron-direction-top-white-icon.png'
 import './section.css';
 import styled from 'styled-components'
 import { Fade
 
  } from 'react-reveal';
+import ScrollToTop from './ScrollToTop';
 
-const Section = (props) => {
+const Section = forwardRef((props, ref) => {
 
     
         const handleScrollDown = () => {
           window.scrollBy({
-            top: window.innerHeight, // Scroll down by one viewport height
-            behavior: 'smooth' // Smooth scrolling
+            top: window.innerHeight, 
+            behavior: 'smooth'
           });
-        }
-    
+        };
+
+        const handleScrollToTop = () => {
+            window.scrollTo({
+                top: 0, 
+                behavior: 'smooth'
+            });
+        };
+        console.log(props)
   return (
-    <Container image={props.image}>
+    
+    <Container ref={ref} image={props.image}>
         <Fade bottom>
+            
             <div className='textitem'>
                 <h1>{props.title}</h1>
                 <p>
@@ -46,6 +57,8 @@ const Section = (props) => {
                 </div>
             </Fade>
             <img src={downArrow} onClick={handleScrollDown} height={40} />
+            <ScrollToTop/>
+            
 
             
             
@@ -56,7 +69,7 @@ const Section = (props) => {
 
     </Container>
   )
-}
+});
 
 const Container = styled.div`
     
