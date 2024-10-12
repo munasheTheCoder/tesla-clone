@@ -19,8 +19,6 @@ const Header = () => {
           <li><a href="#">Model X</a></li>
           <li><a href="#">Model Y</a></li>
           <li><a href="#">Cyber Truck</a></li>
-          <li><a href="#">Solar Roof</a></li>
-          <li><a href="#">Accessories</a></li>
         </ul>
       </nav>
 
