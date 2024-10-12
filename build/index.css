@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+}
+
+@keyframes upDown {
+    0%, 20%, 50%, 80%, 100%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(5px);
+    }
+
+    60%{
+        transform: translateY(3px);
+    }
+    
+}
+
+header{
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+header a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(62, 62, 62)
+}
+
+header nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+}
+.second-menu{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    color: black
+}
+.navBar li {
+    list-style: none;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    
+}
+.navBar li a{
+    font-weight: 600;
+}
+.navBar img {
+    margin-left: 230px;
+   
+}
+.navBar{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    right:0;
+    background: transparent;
+    backdrop-filter: blur(10px ) saturate(120%) drop-shadow(4px 4px 10px black);
+    width: 300px;
+    z-index: 100;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    
+}
+@media (max-width: 1150px) {
+    header nav ul{
+        display: none;
+    }
+    body{
+        overflow-x: hidden;
+    }
+
+    .all-buttons img{
+        margin-bottom: 20px;
+    }
+    
+}
