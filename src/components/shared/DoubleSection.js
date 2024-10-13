@@ -47,15 +47,16 @@ const Container = styled.div`
     justify-content: space-between;
     align-items:center;
     background-image: ${({image}) => `url(${require(`../../images/${image}`)})`};
+    @media (max-width: 1200px){
+    width: 88vw;
+    height: 92vh;
+    }
     @media (max-width: 980px) {
         width: 93vw;
         height: 60vh;
         margin: 1vw 0;
     }
-        @media (max-width: 1200px){
-        width: 88vw;
-        height: 92vh;
-        }
+    
     
 
 `
