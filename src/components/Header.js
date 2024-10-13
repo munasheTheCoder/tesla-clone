@@ -108,6 +108,9 @@ const HeaderContainer = styled.div`
     justify-content: space-between;
     list-style: none;
     gap: 0.5rem;
+    img{
+    
+    }
     @media (max-width: 1150px) {
     display: none;
 }
