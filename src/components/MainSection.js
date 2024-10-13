@@ -56,7 +56,7 @@ const MainSection = ({image, image2, secondImage, secondImage2}) => {
             
 
             </Description>
-            {backgrounds[currentIndex].img && <img src={backgrounds[currentIndex].img} style={{ margin: '20px 0', display: 'block', maxWidth: '100%', height: 'auto' }}  alt="we robot logo"/>}
+            {backgrounds[currentIndex].img && <img src={backgrounds[currentIndex].img} style={{ margin: '20px 0', display: 'block', maxWidth: '100%', height: 200 }}  alt="we robot logo"/>}
             <Buttons right={backgrounds[currentIndex].buttonText2} right2={backgrounds[currentIndex].buttonText}/>
           </Contain>
 
@@ -144,7 +144,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center; 
   align-items: flex-start;
-  background-color: aqua;
   padding: 0 3%;
   width: 100%;
   height: 100vh;
