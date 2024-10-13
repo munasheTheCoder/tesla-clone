@@ -42,6 +42,7 @@ const Footer = () => {
 
 const About = styled.div`
     display: flex;
+    white-space: nowrap;
     gap: 1rem;
     margin: 1rem 0;
     li{
@@ -55,6 +56,7 @@ const About = styled.div`
         color:
         RGB(92, 94, 98);
     }
+        
         @media (max-width: 980px){
            flex-direction: column;
         }
@@ -73,6 +75,9 @@ const Container = styled.div`
     justify-content: center;
     align-items:center;
     text-align: center;
+    @media (max-width: 1300px){
+            width: 40vw;
+        }
     p{
         
         font-size: 12px;
