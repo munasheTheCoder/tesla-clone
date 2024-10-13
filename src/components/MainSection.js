@@ -77,6 +77,7 @@ display: flex;
 flex-direction:column;
 align-items: flex-start;
 `
+
 const Dot = styled.button`
   height: 15px;
   width: 15px;
@@ -100,6 +101,7 @@ const Description = styled.h1`
     font-size: 4rem; 
     width: 40%;
     margin-bottom: 0.4vw 0 ;
+    
     &:hover {
         text-decoration-thickness: 2px;
     }
@@ -107,7 +109,7 @@ const Description = styled.h1`
     font-size: 2rem;
     }
     @media (max-width: 980px) {
-        width: 100%;
+        width: 90%;
 
     }
  
@@ -153,10 +155,10 @@ const Container = styled.div`
   }
 
   @media (max-width: 980px) {
-    width: 100%;
-    flex-grow: 1;
+    width: 80%;
     align-items: flex-start; 
     justify-content: flex-end; 
+    margin-bottom: 10vh;
   }
 
 `

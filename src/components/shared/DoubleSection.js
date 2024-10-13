@@ -52,6 +52,10 @@ const Container = styled.div`
         height: 60vh;
         margin: 1vw 0;
     }
+        @media (max-width: 1200px){
+        width: 88vw;
+        height: 92vh;
+        }
     
 
 `
@@ -89,7 +93,7 @@ const Wrap = styled.div`
     display: flex;
     justify-content: center;
     gap: 0.8vw;
-    @media (max-width: 980px) {
+    @media (max-width: 1200px) {
         display: flex;
         justify-content: center;
         align-items: center;

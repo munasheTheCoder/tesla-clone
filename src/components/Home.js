@@ -5,6 +5,8 @@ import Section from './shared/Section'
 import DoubleSection from './shared/DoubleSection'
 import Header from './Header'
 import MainSection from './MainSection'
+import Footer from './Footer'
+
 function Home() {
   const modelS = useRef(null)
   const model3 = useRef(null)
@@ -135,6 +137,7 @@ function Home() {
         videoText="Join Tesla"
         lefttext = "Shop Now"
         peakPower="1,040"/>
+        <Footer/>
     </>
     
     

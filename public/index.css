@@ -40,6 +40,18 @@ body{
     
 }
 
+.menu{
+    display: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: color .33s ease, background-color .33s ease;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px) saturate(120%) drop-shadow(4px 4px 10px black) ;
+
+}
 button{
     height: 15px;
     width: 15px;
@@ -61,6 +73,7 @@ header{
     padding: 0 3%;
     z-index: 1000;
     cursor: pointer;
+    
 }
 
 header a{
@@ -146,6 +159,12 @@ header nav ul{
 
     .all-buttons img{
         margin-bottom: 20px;
+    }
+    .second-menu{
+        display: none;
+    }
+    .menu{
+        display: block;
     }
     
 }

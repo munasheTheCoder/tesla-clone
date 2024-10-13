@@ -33,6 +33,10 @@ const LeftButton = styled.div`
        font-size: 0.8rem;
       
     }
+        @media (max-width: 1200px) {
+       width: 15rem;
+       height: 2.5rem;
+    }
        @media (max-width: 980px) {
        width: 10rem;
        height: 2.5rem;
