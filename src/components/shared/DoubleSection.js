@@ -7,10 +7,11 @@ const DoubleSection = (props) => {
     <Wrap>
         <Container image={props.image}>
             <Text>
-                <h1>{props.title}</h1>
-                <p>
-                {props.description}
-                </p>
+            <Title>{props.title}</Title>
+                        <Description>
+                        {props.description}
+
+                        </Description>
 
             </Text>
             <Buttons left={props.lefttext} right={props.rightext}/>
@@ -18,10 +19,11 @@ const DoubleSection = (props) => {
         </Container>
         <Container2 image={props.secondImage}>
             <Text>
-                <h1>{props.title2}</h1>
-                <p>
-                {props.description2}
-                </p>
+            <Title>{props.title2}</Title>
+                        <Description>
+                        {props.description2}
+
+                        </Description>
 
             </Text>
             <Buttons left={props.lefttext} right={props.rightext}/>
@@ -37,15 +39,17 @@ const Container = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 5px;
-    width: 45.6vw;
-    height: 80vh;
+    width: 43.6vw;
+    height: 92vh;
     display: flex;
     margin: 0.4vw 0;
     flex-direction: column;
     justify-content: space-between;
-    background-image: ${({image})=> `url(${require(`../../images/${image}`)})`};
+    align-items:center;
+    background-image: ${({image}) => `url(${require(`../../images/${image}`)})`};
     @media (max-width: 980px) {
-        width: 85vw;
+        width: 93vw;
+        height: 60vh;
         margin: 1vw 0;
     }
     
@@ -54,6 +58,31 @@ const Container = styled.div`
 const Container2 = styled(Container)`
   background-image: ${({image})=> `url(${require(`../../images/${image}`)})`};
 
+`
+
+const Title = styled.h1`
+ font-size: 5rem;
+ @media (max-width: 1920px){
+  font-size: 3rem;
+ }
+`
+const Description = styled.a`
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    cursor: pointer; 
+    &:hover {
+        text-decoration-thickness: 2px;
+    }
+    @media (max-width: 1920px){
+    font-size: 1.5rem;
+    }
+    @media (max-width: 980px) {
+        font-size: 1rem;
+    }
+ 
 `
 
 const Wrap = styled.div`

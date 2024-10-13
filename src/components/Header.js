@@ -1,19 +1,15 @@
 import React , {useState, useRef}from 'react'
-import logo from '../images/logo.svg'
-import cancelMenu from '../images/cancel.svg'
-import menu from '../images/three-horizontal-lines-icon.svg'
+import logo from '../images/teslalogo.svg'
+import profile from '../images/profile.svg'
+import support from '../images/support.svg'
+import global from '../images/globe.svg'
 import styled from 'styled-components'
+
 const Header = ({ modelSRef, model3Ref, modelXRef, modelYRef, modelCRef, modelNRef, modelARef }) => {
 
-  const scrollToSection = (elementRef, event) => {
-    event.preventDefault();
-    if (elementRef.current) {
-        window.scrollTo({
-            top: elementRef.current.offsetTop,
-            behavior: 'smooth',
-        });
-    }
-};
+  
+
+  
   const [open, setOpen] = useState(0)
 
  
@@ -22,36 +18,23 @@ const Header = ({ modelSRef, model3Ref, modelXRef, modelYRef, modelCRef, modelNR
       <img className='tesla' src={logo}/>
       <nav>
         <ul>
-          <li><a onClick={(event) => scrollToSection(modelSRef, event)} href="/">Model S</a></li>
-          <li><a onClick={(event) => scrollToSection(model3Ref, event)} href='/'>Model 3</a></li>
-          <li><a onClick={(event) => scrollToSection(modelXRef, event)} href="/">Model X</a></li>
-          <li><a onClick={(event) => scrollToSection(modelYRef, event)} href="/">Model Y</a></li>
-          <li><a onClick={(event) => scrollToSection(modelCRef, event)} href="/">Cyber Truck</a></li>
-          <li><a onClick={(event) => scrollToSection(modelNRef, event)}  href="/">Solar Roof</a></li>
-          <li><a onClick={(event) => scrollToSection(modelARef, event)}  href="/">Accessories</a></li>
+          <li><a  href="/">Vehicles</a></li>
+          <li><a  href='/'>Energy</a></li>
+          <li><a  href="/">Charging</a></li>
+          <li><a  href="/">Discover</a></li>
+          <li><a  href="/">Shop</a></li>
+          <li><a   href="/">We, Robot</a></li>
         </ul>
       </nav>
 
       <div className='second-menu'>
-        <p>
-          shop
-        </p>
-        <p>
-          tesla account
-        </p>
-        <img src={menu} onClick={() => setOpen(true)} height={20}/>
+        
+        <img src={support} onClick={() => setOpen(true)} />
+        <img src={global} onClick={() => setOpen(true)} />
+        <img src={profile} onClick={() => setOpen(true)} />
       </div>
 
-      <NavMenu show={open}>
-            <img className='cancel' onClick={() => setOpen(false)} src={cancelMenu} height={25}/>
-            <li><a onClick={(event) => scrollToSection(modelSRef, event)} href="#">Model S</a></li>
-          <li><a onClick={(event) => scrollToSection(model3Ref, event)} href='#'>Model 3</a></li>
-          <li><a onClick={(event) => scrollToSection(modelXRef, event)} href="#">Model X</a></li>
-          <li><a onClick={(event) => scrollToSection(modelYRef, event)} href="#">Model Y</a></li>
-          <li><a onClick={(event) => scrollToSection(modelCRef, event)} href="#">Cyber Truck</a></li>
-          <li><a onClick={(event) => scrollToSection(modelNRef, event)}  href="#">Solar Roof</a></li>
-          <li><a onClick={(event) => scrollToSection(modelARef, event)}  href="#">Accessories</a></li>
-        </NavMenu>
+      
 
     </header>
     
