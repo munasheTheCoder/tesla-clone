@@ -1,6 +1,10 @@
 import React , {useRef} from 'react'
+
+//COMPONENTS
 import Section from './shared/Section'
+import DoubleSection from './shared/DoubleSection'
 import Header from './Header'
+import MainSection from './MainSection'
 function Home() {
   const modelS = useRef(null)
   const model3 = useRef(null)
@@ -21,14 +25,15 @@ function Home() {
         modelCRef={modelC} 
         modelNRef={modelN} 
         modelARef={modelA} />
+      <MainSection image="Homepage-APR-Promo-Hero-Desktop.avif" image2="Homepage-APR-Promo-Hero-Mobile.avif"/>
       <Section 
         ref={modelS}
         id = {0}
         title = "Model S"
         description = "Order Online for Touchless Delivery"
         image = "model-s.avif"
-        lefttext = "Custom order"
-        rightext = "Existing inventory"
+        lefttext = "Order Now"
+        rightext = "Learn More"
         range = "390"
         time = "1.99"
         topSpeed="200"
@@ -38,8 +43,8 @@ function Home() {
         ref={model3}
         id={1}
         title="Model 3"
-        lefttext = "Custom order"
-        rightext = "Existing inventory"
+        lefttext = "Order Now"
+        rightext = "Learn More"
         description="Order Online for Touchless Delivery"
         image="model-3.avif"
         range="400"
@@ -55,8 +60,8 @@ function Home() {
         image="model-x.avif"
         range="350"
         time="1.55"
-        lefttext = "Custom order"
-        rightext = "Existing inventory"
+        lefttext = "Order Now"
+        rightext = "Learn More"
         topSpeed="150"
         peakPower="1,130"
         />
@@ -69,11 +74,11 @@ function Home() {
         range="410"
         time="2.05"
         topSpeed="190"
-        lefttext = "Custom order"
-        rightext = "Existing inventory"
+        lefttext = "Order Now"
+        rightext = "Learn More"
         peakPower="1,040"/>
         <Section
-        id={3}
+        id={4}
         ref={modelC}
         title="Cyber Truck"
         description="Order Online for Touchless Delivery"
@@ -81,29 +86,37 @@ function Home() {
         range="410"
         time="2.05"
         topSpeed="190"
-        lefttext = "Custom order"
-        rightext = "Existing inventory"
+        lefttext = "Order Now"
+        rightext = "Demo drive"
         peakPower="1,040"/>
-        <Section
-        id={4}
-        ref={modelN}
-        title="Solar for New Roofs"
-        description="Solar Roof Costs Less Than a New Roof Plus Solar Panels"
-        image="solar-roof.jpg"
-        range="410"
-        time="2.05"
-        topSpeed="190"
-        lefttext = "Custom order"
-        rightext = "Existing inventory"
-        peakPower="1,040"/>
-        <Section
+        <DoubleSection
         id={5}
+        ref={modelN}
+        title="Solar Roof"
+        title2="Solar Panels"
+        description="Produce Clean Energy From Your Roof"
+        description2="Schedule A Virtual Consultation"
+        image="solar-roof.jpg"
+        secondImage="solar-panel.jpg"
+        lefttext = "Order Now"
+        rightext = "Learn More"
+        peakPower="1,040"/>
+        <Section
+        id={6}
         ref={modelA}
         title="Accessories"
         image="accessories.avif"
         range="410"
         time="2.05"
         topSpeed="190"
+        lefttext = "shop now"
+        peakPower="1,040"/>
+        <Section
+        id={7}
+        ref={modelA}
+        title="We Are Tesla"
+        video={true}
+        videoText="Join Tesla"
         lefttext = "shop now"
         peakPower="1,040"/>
     </>

@@ -22,13 +22,13 @@ const Header = ({ modelSRef, model3Ref, modelXRef, modelYRef, modelCRef, modelNR
       <img className='tesla' src={logo}/>
       <nav>
         <ul>
-          <li><a onClick={(event) => scrollToSection(modelSRef, event)} href="#">Model S</a></li>
-          <li><a onClick={(event) => scrollToSection(model3Ref, event)} href='#'>Model 3</a></li>
-          <li><a onClick={(event) => scrollToSection(modelXRef, event)} href="#">Model X</a></li>
-          <li><a onClick={(event) => scrollToSection(modelYRef, event)} href="#">Model Y</a></li>
-          <li><a onClick={(event) => scrollToSection(modelCRef, event)} href="#">Cyber Truck</a></li>
-          <li><a onClick={(event) => scrollToSection(modelNRef, event)}  href="#">Solar Roof</a></li>
-          <li><a onClick={(event) => scrollToSection(modelARef, event)}  href="#">Accessories</a></li>
+          <li><a onClick={(event) => scrollToSection(modelSRef, event)} href="/">Model S</a></li>
+          <li><a onClick={(event) => scrollToSection(model3Ref, event)} href='/'>Model 3</a></li>
+          <li><a onClick={(event) => scrollToSection(modelXRef, event)} href="/">Model X</a></li>
+          <li><a onClick={(event) => scrollToSection(modelYRef, event)} href="/">Model Y</a></li>
+          <li><a onClick={(event) => scrollToSection(modelCRef, event)} href="/">Cyber Truck</a></li>
+          <li><a onClick={(event) => scrollToSection(modelNRef, event)}  href="/">Solar Roof</a></li>
+          <li><a onClick={(event) => scrollToSection(modelARef, event)}  href="/">Accessories</a></li>
         </ul>
       </nav>
 
