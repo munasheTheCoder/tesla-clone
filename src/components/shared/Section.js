@@ -126,9 +126,9 @@ const ImageContainer = styled.div`
 `;
 const ImageOne = styled.img`
   height: 700px;
-  margin: 0; 
+  margin: 0;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1300px) {
     height: 300px; 
   }
 `;
@@ -136,10 +136,11 @@ const ImageOne = styled.img`
 const ImageTwo = styled.img`
   height: 50px;
   margin: 0; /* Default height for large screens */
-
-  @media (max-width: 800px) {
+   
+  @media (max-width: 1300px) {
     height: 30px; 
   }
+   
 `;
 const Text = styled.div`
 text-align: center;
